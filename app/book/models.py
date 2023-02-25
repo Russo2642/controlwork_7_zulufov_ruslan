@@ -12,7 +12,7 @@ class Book(models.Model):
     email = models.EmailField(max_length=300, null=False, blank=False, verbose_name="Почта")
     text = models.TextField(max_length=3000, null=False, blank=False, verbose_name="Текст")
     status = models.CharField(max_length=50, null=False, blank=False, verbose_name="Статус",
-                              choices=StatusChoice.choices, default=StatusChoice.BLOCKED)
+                              choices=StatusChoice.choices, default=StatusChoice.ACTIVE)
     created_at = models.DateTimeField(auto_now_add=True, verbose_name="Дата и время создания")
     updated_at = models.DateTimeField(auto_now=True, verbose_name="Дата и время обновления")
 
