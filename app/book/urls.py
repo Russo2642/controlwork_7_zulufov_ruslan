@@ -3,6 +3,7 @@ from book.views.base import IndexView
 
 from book.views.book import AddView, UpdateView, DeleteView
 
+
 urlpatterns = [
     path('', IndexView.as_view(), name='index'),
     path('books/', IndexView.as_view(), name='books'),
