@@ -1,8 +1,13 @@
 from django import forms
-from django.forms import widgets
+from book.models import Book
 
 
-class BookForm(forms.Form):
-    name = forms.CharField(max_length=200, required=True, label='Имя автора')
-    email = forms.EmailField(max_length=300, required=True, label='Почта автора')
-    text = forms.CharField(max_length=3000, required=True, label='Текст автора', widget=widgets.Textarea)
+class BookForm(forms.ModelForm):
+    class Meta:
+        model = Book
+        fields = ('name', 'email', 'text')
+        labels = {
+            'name': 'Имя автора',
+            'email': 'Почта автора',
+            'text': 'Текст автора'
+        }

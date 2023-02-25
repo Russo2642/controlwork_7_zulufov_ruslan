@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}Book Update{% endblock %}
+{% block content %}
+
+<div class="container">
+    <h1>Add Book</h1>
+    <div class="form">
+        <form action="{% url 'book_update' books.pk %}" method="post">
+            {% include 'partial/book_form.html' with button_text='Редактировать' %}
+        </form>
+    </div>
+</div>
+{% endblock %}

@@ -18,3 +18,38 @@ class AddView(View):
         else:
             Book.objects.create(**form.cleaned_data)
             return redirect('index')
+
+
+class UpdateView(View):
+    def get(self, request, pk):
+        books = get_object_or_404(Book, pk=pk)
+        form = BookForm(instance=books)
+        return render(request, 'book_update.html',
+                      context={
+                          'form': form,
+                          'books': books
+                      })
+
+    def post(self, request, pk):
+        books = get_object_or_404(Book, pk=pk)
+        form = BookForm(request.POST, instance=books)
+        if form.is_valid():
+            form.save()
+            return redirect('index')
+        return render(request, 'book_update.html', context={'form': form})
+
+
+class DeleteView(View):
+    def get(self, request, pk):
+        books = get_object_or_404(Book, pk=pk)
+        form = BookForm(instance=books)
+        return render(request, 'book_confirm_delete.html',
+                      context={
+                          'books': books,
+                          'form': form
+                      })
+
+    def post(self, request, pk):
+        books = get_object_or_404(Book, pk=pk)
+        books.delete()
+        return redirect('index')

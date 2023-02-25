@@ -10,6 +10,8 @@
         {% for book in books %}
         <h4>{{ book.name }} ({{ book.email }})</h4>
         <h4>{{ book.text }}</h4>
+        <a href="{% url 'book_update' book.pk %}">Update Book</a>
+        <a href="{% url 'book_delete' book.pk %}">Delete Book</a>
         {% endfor %}
     </div>
 </div>
