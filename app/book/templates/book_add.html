@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
-{% block title %}Book Create{% endblock %}
+{% block title %}Book Add{% endblock %}
 {% block content %}
 
 <div class="container">
     <h1>Add Book</h1>
     <div class="form">
         <form action="{% url 'book_add' %}" method="post">
-            {% include 'partial/book_form.html' with button_text='Создать' %}
+            {% include 'partial/book_form.html' with button_text='Добавить' button_class="btn btn-success" %}
         </form>
     </div>
 </div>

@@ -7,16 +7,25 @@
 <div class="container">
     <div class="row">
         <h1>Гостевая книга</h1>
-        <form action="{% url 'index' %}" method="get">
 
-            <input name="search" type="text" placeholder="Search...">
-
+        <form class="form-inline" action="{% url 'index' %}" method="get">
+            <div class="col-4">
+                <div class="input-group">
+                    <input class="form-control" name="search" type="search" placeholder="Введите имя для поиска">
+                    <span class="input-group-btn">
+                        <button class="btn btn-outline-success" type="submit">Поиск</button>
+                    </span>
+                </div>
+            </div>
         </form>
         {% for book in books %}
-        <h4>{{ book.name }} ({{ book.email }})</h4>
-        <h4>{{ book.text }}</h4>
-        <a href="{% url 'book_update' book.pk %}">Update Book</a>
-        <a href="{% url 'book_delete' book.pk %}">Delete Book</a>
+        <div class="notes">
+            <h4>{{ book.name }} ({{ book.email }})
+                <a class="update_icon" href="{% url 'book_update' book.pk %}"><i class="fa-solid fa-pen"></i></a>
+                <a class="delete_icon" href="{% url 'book_delete' book.pk %}"><i class="fa-solid fa-trash"></i></a>
+            </h4>
+            <h3>{{ book.text }}</h3>
+        </div>
         {% endfor %}
     </div>
 </div>
