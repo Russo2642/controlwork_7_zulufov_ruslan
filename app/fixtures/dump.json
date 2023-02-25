@@ -1,0 +1,62 @@
+[
+{
+  "model": "book.book",
+  "pk": 1,
+  "fields": {
+    "name": "John Doe",
+    "email": "johndoe@gmail.com",
+    "text": "Lorem ipsum dolor sit amet",
+    "status": "BLOCKED",
+    "created_at": "2023-02-25T05:51:33.013Z",
+    "updated_at": "2023-02-25T05:51:33.013Z"
+  }
+},
+{
+  "model": "book.book",
+  "pk": 2,
+  "fields": {
+    "name": "Vasilii Pupkin",
+    "email": "vaspupk@gmail.com",
+    "text": "Lorem ipsum dolor sit amet",
+    "status": "BLOCKED",
+    "created_at": "2023-02-25T05:51:58.874Z",
+    "updated_at": "2023-02-25T05:51:58.874Z"
+  }
+},
+{
+  "model": "book.book",
+  "pk": 3,
+  "fields": {
+    "name": "Aaron Ramsey",
+    "email": "aaron123@gmail.com",
+    "text": "Lorem ipsum dolor sit amet",
+    "status": "ACTIVE",
+    "created_at": "2023-02-25T05:52:49.418Z",
+    "updated_at": "2023-02-25T05:52:49.418Z"
+  }
+},
+{
+  "model": "book.book",
+  "pk": 4,
+  "fields": {
+    "name": "Aaron Ramsdale",
+    "email": "ramsdale45_02@gmail.com",
+    "text": "Lorem ipsum dolor sit amet",
+    "status": "ACTIVE",
+    "created_at": "2023-02-25T05:54:05.298Z",
+    "updated_at": "2023-02-25T05:54:05.298Z"
+  }
+},
+{
+  "model": "book.book",
+  "pk": 5,
+  "fields": {
+    "name": "Mikel Arteta",
+    "email": "pobedavapl@gmail.com",
+    "text": "Lorem ipsum dolor sit amet",
+    "status": "ACTIVE",
+    "created_at": "2023-02-25T05:54:34.858Z",
+    "updated_at": "2023-02-25T05:54:34.858Z"
+  }
+}
+]
