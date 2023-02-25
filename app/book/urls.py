@@ -1,11 +1,7 @@
 from django.urls import path
 from book.views.base import IndexView
 
-from book.views.book import AddView
-
-from book.views.book import UpdateView
-
-from book.views.book import DeleteView
+from book.views.book import AddView, UpdateView, DeleteView
 
 urlpatterns = [
     path('', IndexView.as_view(), name='index'),
