@@ -11,3 +11,7 @@ class BookForm(forms.ModelForm):
             'email': 'Почта автора',
             'text': 'Текст автора'
         }
+
+
+class SearchForm(forms.Form):
+    query = forms.CharField()

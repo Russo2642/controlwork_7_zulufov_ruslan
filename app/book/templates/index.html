@@ -1,12 +1,17 @@
 {% extends 'base.html' %}
 {% block title %}Home{% endblock %}
 {% block menu %}
-    <a href="{% url 'book_add' %}">Add Book</a>
+<a href="{% url 'book_add' %}">Add Book</a>
 {% endblock %}
 {% block content %}
 <div class="container">
     <div class="row">
         <h1>Гостевая книга</h1>
+        <form action="{% url 'index' %}" method="get">
+
+            <input name="search" type="text" placeholder="Search...">
+
+        </form>
         {% for book in books %}
         <h4>{{ book.name }} ({{ book.email }})</h4>
         <h4>{{ book.text }}</h4>

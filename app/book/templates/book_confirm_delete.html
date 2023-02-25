@@ -6,9 +6,6 @@
 <div class="container">
     <div class="row">
         <h1>Вы точно хотите удалить книгу ?</h1>
-        <p>{{ books.name }}</p>
-        <p>{{ books.email }}</p>
-        <p>{{ books.text }}</p>
         <form action="{% url 'confirm_delete' books.pk %}" method="post">
             {% include 'partial/book_form.html' with button_text='Удалить' %}
             <p><a href="{% url 'index' %}">Отменить</a></p>
